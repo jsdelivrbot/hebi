@@ -30,4 +30,6 @@ function reset() {
 
   left_score = 0;
   right_score = 0;
+
+  Momo.setFrameRate(10);
 }

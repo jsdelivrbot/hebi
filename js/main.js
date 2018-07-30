@@ -23,7 +23,7 @@ async function main() {
 
 async function loadResources() {
 
-  font = await Momo.loadFontFace("data/woff/pixel.woff");
+  font = await Momo.loadFont("data/woff/pixel.woff");
 
   if (!font) {
 
@@ -105,6 +105,8 @@ function updateLeftGame() {
     LeftFood.changeLocation();
 
     ++left_score;
+
+    Momo.setFrameRate(Momo.getFrameRate() + 0.25);
   }
 
   if (LeftSnake.getX() < 0 || LeftSnake.getY() < 0) {
@@ -129,6 +131,8 @@ function updateRightGame() {
     RightFood.changeLocation();
 
     ++right_score;
+
+    Momo.setFrameRate(Momo.getFrameRate() + 0.25);
   }
 
   if (RightSnake.getX() < 0 || RightSnake.getY() < 0) {
